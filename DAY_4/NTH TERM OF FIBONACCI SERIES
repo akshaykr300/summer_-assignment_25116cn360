@@ -1,0 +1,26 @@
+int main(){
+    int n,i,a=0,b=1,c;
+    printf("Enter the nth term to find in fibonacci seies : ");
+    scanf("%d",&n);
+
+    printf("The nth term is :\n");
+    
+    if(n==0){
+        printf("The fibonacci term =%d",a);
+
+    }
+    else if(n==1){
+        printf("The fibonacci term is=%d",b);
+
+    }
+    else{
+        for(i=2;i<=n;i++){
+            c=a+b;
+            a=b;
+            b=c;
+
+        }
+        printf("The fibonacci term=%d",c);
+    }
+    return 0;
+}
