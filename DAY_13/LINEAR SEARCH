@@ -2,7 +2,7 @@
 
 int main () {
      
-    int i,n,a[100],key,found=0;
+    int i,n,a[100];
 
     printf("enter the array size : ");
     scanf("%d",&n);
@@ -12,23 +12,11 @@ int main () {
         scanf("%d",&a[i]);
 
     }
-    printf("Enter element to search: ");
-    scanf("%d", &key);
+    printf("Array elements are:\n");
 
     for(i = 0; i < n; i++)
     {
-        if(a[i] == key)
-        {
-            found = 1;
-            printf("Element found at position %d", i + 1);
-            break;
-        }
+        printf("%d ", a[i]);
     }
-
-    if(found == 0)
-    {
-        printf("Element not found");
-    }
-
     return 0;
 }
