@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+struct Ticket {
+    int ticketNo;
+    char name[50];
+    int seats;
+    float price, total;
+};
+
+int main() {
+    struct Ticket t[5];
+    int i;
+
+    // Input Ticket Details
+    for(i = 0; i < 5; i++) {
+        printf("\nEnter Details of Customer %d\n", i + 1);
+
+        printf("Enter Ticket Number: ");
+        scanf("%d", &t[i].ticketNo);
+
+        printf("Enter Customer Name: ");
+        scanf("%s", t[i].name);
+
+        printf("Enter Number of Seats: ");
+        scanf("%d", &t[i].seats);
+
+        printf("Enter Price per Ticket: ");
+        scanf("%f", &t[i].price);
+
+        t[i].total = t[i].seats * t[i].price;
+    }
+
+    // Display Ticket Details
+    printf("\n================ TICKET BOOKING SYSTEM ================\n");
+    printf("Ticket No\tName\tSeats\tPrice\tTotal Amount\n");
+
+    for(i = 0; i < 5; i++) {
+        printf("%d\t\t%s\t%d\t%.2f\t%.2f\n",
+               t[i].ticketNo,
+               t[i].name,
+               t[i].seats,
+               t[i].price,
+               t[i].total);
+    }
+
+    return 0;
+}
